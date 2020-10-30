@@ -11,7 +11,7 @@ object Main extends App with ProtoEncryption {
   println("Postgres connector")
 
   classOf[org.postgresql.Driver]
-  val con_st = "jdbc:postgresql://localhost:5432/postgres?user=postgres&password=changeme"
+  val con_st = "jdbc:postgresql://localhost:5432/postgres?user=user&password=password"
   val conn = DriverManager.getConnection(con_st)
   var people = new scala.collection.mutable.ListBuffer[(BigInt, String, BigInt, Boolean, String, Try[EncryptedProto])]()
   try {
